@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Loejee's Experiences</title>
+		<!-- Use Tailwind CSS for modern styling -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- Use Noto Sans from Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			body {
+				font-family: "Noto Sans", sans-serif;
+				background-color: #f3f4f6;
+				color: #1f2937;
+			}
+		</style>
+	</head>
+	<body>
+		<%- include('../partials/head'); %>
+
+		<div class="flex items-center justify-center min-h-screen p-4 md:p-8">
+			<!-- Experiences Section Container -->
+			<div class="bg-white rounded-3xl shadow-xl max-w-3xl w-full p-8 md:p-12">
+				<div class="text-center mb-8 md:mb-10">
+					<h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+						My Journey
+					</h1>
+					<p class="text-gray-600">
+						A glimpse into my professional and academic background.
+					</p>
+				</div>
+
+				<!-- Work Experience Section -->
+				<section class="mb-10">
+					<h2
+						class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2"
+					>
+						Work Experience
+					</h2>
+
+					<div class="space-y-6">
+						<% if (workExperience && workExperience.length > 0) { %> <%
+						workExperience.forEach(function(job) { %>
+						<div class="bg-blue-50 p-6 rounded-2xl shadow-md">
+							<h3 class="text-xl font-semibold text-gray-900">
+								<%= job.title %>
+							</h3>
+							<p class="text-blue-700 text-lg mb-1"><%= job.company %></p>
+							<p class="text-gray-600 text-sm">
+								<%= job.type %> | <%= job.years %>
+							</p>
+							<% if (job.description) { %>
+							<p class="mt-2 text-gray-700"><%= job.description %></p>
+							<% } %>
+						</div>
+						<% }); %> <% } else { %>
+						<p class="text-gray-500 text-center">
+							No work experience listed yet.
+						</p>
+						<% } %>
+					</div>
+				</section>
+
+				<!-- Education Section -->
+				<section>
+					<h2
+						class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2"
+					>
+						Education
+					</h2>
+
+					<div class="space-y-6">
+						<% if (education && education.length > 0) { %> <%
+						education.forEach(function(degree) { %>
+						<div class="bg-blue-50 p-6 rounded-2xl shadow-md">
+							<h3 class="text-xl font-semibold text-gray-900">
+								<%= degree.degree %>
+							</h3>
+							<p class="text-blue-700 text-lg mb-1">
+								<%= degree.institution %>
+							</p>
+							<p class="text-gray-600 text-sm"><%= degree.years %></p>
+							<% if (degree.description) { %>
+							<p class="mt-2 text-gray-700"><%= degree.description %></p>
+							<% } %>
+						</div>
+						<% }); %> <% } else { %>
+						<p class="text-gray-500 text-center">No education listed yet.</p>
+						<% } %>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>

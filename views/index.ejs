@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About Me</title>
+		<!-- Use Tailwind CSS for modern styling -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- Use Noto Sans from Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			body {
+				font-family: "Noto Sans", sans-serif;
+				background-color: #f3f4f6;
+				color: #1f2937;
+			}
+
+			/* Custom class for a squircle-like shape using a large border-radius */
+			.squircle-mask {
+				border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+			}
+		</style>
+	</head>
+	<body>
+		<%- include('../partials/head'); %>
+		<main class="flex items-center justify-center min-h-screen p-4 md:p-8">
+			<!-- About Me Card Container -->
+			<div
+				class="bg-white rounded-3xl shadow-xl overflow-hidden max-w-4xl w-full p-8 md:p-12"
+			>
+				<div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+					<!-- Profile Photo Section -->
+					<div class="flex-shrink-0 relative w-48 h-48 md:w-64 md:h-64">
+						<!-- Outer container to apply shadow and squircle shape -->
+						<div
+							class="absolute inset-0 bg-white rounded-3xl squircle-mask shadow-lg"
+						></div>
+						<!-- Inner container with the placeholder image -->
+						<img
+							src="https://placehold.co/256x256/2a60e0/ffffff?text=Profile+Photo"
+							alt="Placeholder profile photo"
+							class="object-cover w-full h-full rounded-3xl squircle-mask"
+						/>
+					</div>
+
+					<!-- Text Content Section -->
+					<div class="flex-grow text-center md:text-left">
+						<!-- Name/Title -->
+						<h1
+							class="text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-900"
+						>
+							Loejee Miguel L. Dulaugon
+						</h1>
+						<!-- Role Description -->
+						<h2
+							class="text-xl md:text-2xl font-semibold text-blue-600 mb-4 md:mb-6"
+						>
+							Frontend Developer, Godot Developer & Flutter Developer
+						</h2>
+						<!-- Bio/About Me text -->
+						<p class="text-gray-700 leading-relaxed mb-6 md:mb-8">
+							As a versatile developer, I specialize in crafting beautiful and
+							performant user interfaces. My passion lies in creating dynamic
+							web experiences with modern frameworks, building cross-platform
+							mobile applications with Flutter, and bringing game ideas to life
+							using the powerful Godot engine. I am dedicated to clean code,
+							seamless user experiences, and continuous learning across the full
+							development stack.
+						</p>
+
+						<!-- Skills Section with Tags -->
+						<div class="flex flex-wrap gap-2 justify-center md:justify-start">
+							<!-- Skill tags -->
+							<span
+								class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm"
+								>Flutter</span
+							>
+							<span
+								class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm"
+								>TypeScript</span
+							>
+							<span
+								class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm"
+								>JavaScript</span
+							>
+							<span
+								class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm"
+								>NextJS</span
+							>
+							<span
+								class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm"
+								>Godot</span
+							>
+							<span
+								class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm"
+								>NestJS</span
+							>
+							<span
+								class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm"
+								>TailwindCSS</span
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+<<<<<<< HEAD
+=======
+		<%- include('../partials/footer'); %>
+>>>>>>> 074509b5f1ab0058fe20261f3c1a606d7440c4a7
+	</body>
+</html>
