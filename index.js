@@ -6,7 +6,8 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get(["/", "/index"], (req, res) => {
-	res.render("index");
+	const pfp = "/images/sysdev-cropped.png";
+	res.render("index", { pfp });
 });
 
 app.get("/experience", (req, res) => {
@@ -44,7 +45,35 @@ app.get("/projects", (req, res) => {
 			name: "SAMAHAN All for more",
 			content: `<div><h3>SAMAHAN All for more</h3><p>Under SAMAHAN Systems Development, we have developed and designed an official page for Ateneo's all student organization SAMAHAN</p><br /><p>Hosted and deployed in Ateneo De Davao's official servers and domain. Fully featured full stack website created using NextJs and NestJS.</p></div>`,
 			images: ["/images/portfolioImages/samahanAllForMore/home_page.jpg"],
+			href: "https://samahan.addu.edu.ph/",
+			googlePlayHref: null,
+		},
+		{
+			name: "SAMAHAN Newsfeed",
+			content: `<div><h3>SAMAHAN All for more</h3><p>Under SAMAHAN Systems Development, we have developed and designed an official website for Atenews</p><br /><p>Hosted and deployed in Ateneo De Davao's official servers and domain. Fully featured full stack website created using NextJs and NestJS.</p></div>`,
+			images: ["/images/portfolioImages/samahan-newsfeed-cropped.png"],
+			href: "",
+			googlePlayHref: null,
+		},
+		{
+			name: "SAMAHAN Palaro 2024",
+			content: `<div><h3>SAMAHAN All for more</h3><p>Under SAMAHAN Systems Development, we have developed and designed an official page for Ateneo's SAMAHAN Palaro 2024</p><br /><p>Hosted and deployed in Ateneo De Davao's official servers and domain. Fully featured full stack website created using NextJs and NestJS.</p></div>`,
+			images: [],
+			href: "https://github.com/SAMAHAN-Systems-Development/samahan-palaro-2024",
+			googlePlayHref: null,
+		},
+		{
+			name: "SAMAHAN ACMS 2023",
+			content: `<div><h3>SAMAHAN Automated Crowd Monitoring System 2023 (ACMS)</h3><p>Under SAMAHAN Systems Development, we have developed and designed an official WebApp to manage events</p><br /><p>Hosted and deployed in Ateneo De Davao's official servers and domain. Fully featured full stack website created using NextJs and NestJS.</p></div>`,
+			images: ["/images/portfolioImages/acms.png"],
 			href: "https://samahan.addu.edu.ph",
+			googlePlayHref: null,
+		},
+		{
+			name: "SAMAHAN Adto",
+			content: `<div><h3>SAMAHAN Automated Crowd Monitoring System 2023 (ACMS)</h3><p>Under SAMAHAN Systems Development, we have developed and designed an official WebApp to manage events</p><br /><p>Hosted and deployed in Ateneo De Davao's official servers and domain. Fully featured full stack website created using NextJs and NestJS.</p></div>`,
+			images: [],
+			href: "https://github.com/SAMAHAN-Systems-Development/adto-admin",
 			googlePlayHref: null,
 		},
 		{
@@ -76,6 +105,29 @@ app.get("/projects", (req, res) => {
 				"/images/portfolioImages/eCommerceApp/shopping_cart_2.png",
 				"/images/portfolioImages/eCommerceApp/wish_list.png",
 			],
+			googlePlayHref: null,
+		},
+		{
+			name: "Eizou Films Figma",
+			content: `<div>Advertising/Marketing
+🤝 Your Story, Our Film.
+📸 Authentic storytelling that inspires & leaves a lasting impact.</div>`,
+			images: ["/images/portfolioImages/eizou.png"],
+			href: "https://eizou-films-website.vercel.app",
+			googlePlayHref: null,
+		},
+		{
+			name: "LGU+ ESim Figma",
+			content: `<div><h3>Designed UI for LGU+. </h3><p>is a major South Korean telecommunications and media company that provides mobile network services, high-speed internet, and IPTV to millions of subscribers. As a subsidiary of the LG Corporation, LG U+ offers a wide range of data services and was the first carrier in South Korea to launch a commercial 5G network.</p></div>`,
+			images: ["/images/portfolioImages/LGU+.png"],
+			href: "",
+			googlePlayHref: null,
+		},
+		{
+			name: "Kohiibara",
+			content: `<div><h3>Designed UI for Human Computer Interface Subject.</h3></div>`,
+			images: ["/images/portfolioImages/Kohiibara.png"],
+			href: "",
 			googlePlayHref: null,
 		},
 		{
